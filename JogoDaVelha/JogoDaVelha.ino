@@ -10,6 +10,7 @@ int coluna;
 bool HaVencedor = false;
 int tabuleiro[9];
 int jogadorDaVez = 1;
+String erro="";
 
 // Jogo - JSON para envio ao Node-red pela serial
 JsonDocument Jogo;
@@ -23,6 +24,13 @@ void zerarTabuleiro() {
   for (int index = 0; index < 9; index++) {
     tabuleiro[index] = 0;
   }
+  velha = 0;
+  linha = 0;
+  coluna = 0;
+  HaVencedor = false;
+  jogadorDaVez = 1;
+  erro = "";
+  jogada = "";
 }
 
 // Função de validação da jogada
@@ -78,14 +86,15 @@ String IntArrayToString(int matriz[], int size) {
   return result;
 }
 
-void PartidaJSON(String msg) {
-  Jogo["jogada"] = jogada;
+void PartidaJSON(String msg = "", String erro = "") {
+  //Jogo["jogada"] = jogada;
   Jogo["velha"] = velha;
   Jogo["linha"] = linha;
   Jogo["coluna"] = coluna;
   Jogo["HaVencedor"] = HaVencedor;
   Jogo["tabuleiro"] = IntArrayToString(tabuleiro, ARRAY_SIZE(tabuleiro));
   Jogo["msg"] = msg;
+  Jogo["erro"] = erro;
 
   serializeJson(Jogo, Serial);
   Serial.println();
@@ -102,8 +111,8 @@ void loop() {
   // Zera Tabuleiro
   zerarTabuleiro();
   // Inicia variáveis do jogo
-  HaVencedor = false;
-  velha = 0;
+  // HaVencedor = false;
+  // velha = 0;
 
   PartidaJSON(F("Partida Iniciada"));  // Envia o JSON do estado da partida (Início)
   do {
@@ -111,7 +120,7 @@ void loop() {
     //TabuleiroJSON();
     // Imprime o tabuleiro
     //imprimeTabuleiro();
-    PartidaJSON("Digite sua jogada jogador " + String(jogadorDaVez));
+    PartidaJSON("Digite sua jogada jogador " + String(jogadorDaVez), erro);
 
     // Limpa a variável que armazena a jogada
     jogada = "";
@@ -120,12 +129,12 @@ void loop() {
     // Serial.println(jogadorDaVez);
 
     // Espera o comando da serial
-    while (!Serial.available())
-      ;
+    while (!Serial.available());
     // Recebe a jogada pela serial
     jogada = Serial.readStringUntil('\n');
     //jogada = Serial.readString();
     //Serial.println(jogada.length());
+    erro = ""; // Limpa a variável da msg de erro
     if (validaJogada(jogada)) {
       // Se jogada válida continue .....
       // Serial.println("Se jogada válida continue .....");
@@ -135,7 +144,6 @@ void loop() {
       // Serial.print(linha);
       // Serial.print(", Coluna:");
       // Serial.println(coluna);
-
 
       if (tabuleiro[3 * linha + coluna] == 0) {
         // Se for verdade ..
@@ -166,11 +174,11 @@ void loop() {
       } else {
         // se for falso ...
         // Serial.println("Casa ocupada ...");
-        PartidaJSON(F("Casa ocupada ..."));
+        erro = F("Casa ocupada ...");
       }
     } else {
       // Serial.println("Jogada inválida!!!");
-      PartidaJSON(F("Jogada inválida"));
+      erro = F("Jogada inválida");
     }
     // delay(1000000);
   } while (!HaVencedor && velha < 9);
@@ -180,10 +188,11 @@ void loop() {
     // Serial.print("Jogador ");
     // Serial.print(jogadorDaVez);
     // Serial.println(" venceu!!!");
-    PartidaJSON("Jogador " + String(jogadorDaVez) + " venceu!!!");
+    PartidaJSON("Jogador " + String(jogadorDaVez) + " venceu!!! Clique no botão enviar para reiniciar");
   } else {
     // Escreve VELHA!!!
     // Serial.println("VELHA!!!");
-    PartidaJSON(F("VELHA!!!"));
+    PartidaJSON(F("VELHA!!! Clique no botão enviar para reiniciar"));
   }
+  while (!Serial.available());
 }
