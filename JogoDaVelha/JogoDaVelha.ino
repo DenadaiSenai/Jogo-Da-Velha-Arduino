@@ -1,29 +1,31 @@
-
 #include <ArduinoJson.h>
 
+// Macro para calcular a qtde de elementos de uma matriz
 #define ARRAY_SIZE(array) ((sizeof(array)) / (sizeof(array[0])))
 
-// Declaração de variáveis
-int velha;
-int linha;
-int coluna;
-bool HaVencedor = false;
-int tabuleiro[9];
-int jogadorDaVez = 1;
-String erro="";
+// Declaração de variáveis globais
+bool HaVencedor = false;  // Variável de controle indica se houve vencedor
+int velha;                // Faz a contagem de jogadas e se passar de 9 é declardado empate (VELHA)
+int linha;                // Armazena a linha da posição do lance do jogador
+int coluna;               // Armazena a coluna da posição do lance do jogador
+int tabuleiro[9];         // Variável do tabuleiro com 9 posições (3x3)
+int jogadorDaVez = 1;     // Aramazena o jogador da vez
+String erro = "";         // Variável para armazenar a mensagem de erro (JSON)
 
 // Jogo - JSON para envio ao Node-red pela serial
 JsonDocument Jogo;
 
-// Armazena a jogada
+// Armazena a jogada que é recebida pela Serial
 String jogada;
 
 // Função para zerar tabuleiro
 void zerarTabuleiro() {
-  // Instrução for faz N repetições
+  // Zera o tabuleiro
   for (int index = 0; index < 9; index++) {
     tabuleiro[index] = 0;
   }
+
+  // Inicia as Variáveis globais
   velha = 0;
   linha = 0;
   coluna = 0;
@@ -52,32 +54,9 @@ bool validaJogada(String entrada) {
   return entradaValida;
 }
 
-// void imprimeTabuleiro() {
-//   Serial.println("-----");
-
-//   for (char l = 0; l < 3; l++) {
-//     //for (char c = 0; c < 3; c++) {
-//     // Imprime tabuleiro segunda linha
-//     Serial.print(tabuleiro[l * 3 + 0]);
-//     Serial.print("|");
-//     Serial.print(tabuleiro[l * 3 + 1]);
-//     Serial.print("|");
-//     Serial.println(tabuleiro[l * 3 + 2]);
-//     Serial.println("-----");
-//     //}
-//   }
-// }
-
-// void TabuleiroJSON() {
-//   String partida = "";
-//   for (char l = 0; l < 9; l++) {
-//     // partida = String(partida + tabuleiro[l]);
-//     partida += String(tabuleiro[l]);
-//   }
-
-//   Serial.println("{ tabuleiro: " + partida + "}");
-// }
-
+// Função para serializar uma matriz de inteiros em string
+// int matriz -> matriz a ser serializada
+// int size -> tamanho da matriz, utilizada no FOR
 String IntArrayToString(int matriz[], int size) {
   String result = "";
   for (int i = 0; i < size; i++) {
@@ -86,8 +65,11 @@ String IntArrayToString(int matriz[], int size) {
   return result;
 }
 
+// Função que atualiza o JSON e envia pela serial
+// String msg -> Mensagem sobre o jogo
+// String erro -> Mensagem de erros de lances de jogadas
 void PartidaJSON(String msg = "", String erro = "") {
-  //Jogo["jogada"] = jogada;
+  // Constrói o JSON
   Jogo["velha"] = velha;
   Jogo["linha"] = linha;
   Jogo["coluna"] = coluna;
@@ -95,55 +77,42 @@ void PartidaJSON(String msg = "", String erro = "") {
   Jogo["tabuleiro"] = IntArrayToString(tabuleiro, ARRAY_SIZE(tabuleiro));
   Jogo["msg"] = msg;
   Jogo["erro"] = erro;
-
+  Jogo["jogadorDaVez"] = jogadorDaVez;
+  // Envia o JSON pela serial
   serializeJson(Jogo, Serial);
   Serial.println();
 }
 
 void setup() {
-  // put your setup code here, to run once:
+  // Habilita a serial em configura com a velocidade de 115200
   Serial.begin(115200);
-  // Variáveis glocais que serão enviadas ao Node-red
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  // Zera Tabuleiro
+  // Zera Tabuleiro e inica a variáveis globais do jogo
   zerarTabuleiro();
-  // Inicia variáveis do jogo
-  // HaVencedor = false;
-  // velha = 0;
 
   PartidaJSON(F("Partida Iniciada"));  // Envia o JSON do estado da partida (Início)
   do {
-    // JSON Tabuleiro
-    //TabuleiroJSON();
-    // Imprime o tabuleiro
-    //imprimeTabuleiro();
+    // Atualiza as informações do JSON e envia pela serial
     PartidaJSON("Digite sua jogada jogador " + String(jogadorDaVez), erro);
 
     // Limpa a variável que armazena a jogada
     jogada = "";
-    // Digitar a jogada
-    // Serial.print("Digite sua jogada jogador ");
-    // Serial.println(jogadorDaVez);
 
     // Espera o comando da serial
-    while (!Serial.available());
+    while (!Serial.available())
+      ;
     // Recebe a jogada pela serial
+    // a jogada é uma string que indica a linha e a coluna no tabuleiro
     jogada = Serial.readStringUntil('\n');
-    //jogada = Serial.readString();
-    //Serial.println(jogada.length());
-    erro = ""; // Limpa a variável da msg de erro
+
+    erro = "";  // Atualiza a variável da msg de erro
     if (validaJogada(jogada)) {
       // Se jogada válida continue .....
       // Serial.println("Se jogada válida continue .....");
       linha = int(jogada[0] - '0');
       coluna = int(jogada[2] - '0');
-      // Serial.print("Linha:");
-      // Serial.print(linha);
-      // Serial.print(", Coluna:");
-      // Serial.println(coluna);
 
       if (tabuleiro[3 * linha + coluna] == 0) {
         // Se for verdade ..
@@ -181,18 +150,21 @@ void loop() {
       erro = F("Jogada inválida");
     }
     // delay(1000000);
-  } while (!HaVencedor && velha < 9);
+  } while (!HaVencedor && velha < 9);  // Finaliza o jogo caso tenha vencedor ou empate
 
-  if (HaVencedor) {
+  if (HaVencedor) {  // Mensagem sobre o vencedor
     // Escreve Há vencedor
     // Serial.print("Jogador ");
     // Serial.print(jogadorDaVez);
     // Serial.println(" venceu!!!");
-    PartidaJSON("Jogador " + String(jogadorDaVez) + " venceu!!! Clique no botão enviar para reiniciar");
-  } else {
+    PartidaJSON("Jogador " + String(jogadorDaVez) + " venceu!!! Reiniciar !!!");
+  } else {  // Mensagem do empate (VELHA)
     // Escreve VELHA!!!
     // Serial.println("VELHA!!!");
-    PartidaJSON(F("VELHA!!! Clique no botão enviar para reiniciar"));
+    PartidaJSON(F("VELHA!!! Reiniciar !!!"));
   }
+
+  // Espera um dado na serial para reiniciar
   while (!Serial.available());
+  Serial.readStringUntil('\n');
 }
