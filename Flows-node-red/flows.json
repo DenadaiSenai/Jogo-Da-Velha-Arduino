@@ -1,0 +1,2449 @@
+[
+    {
+        "id": "d0affe21d96e1cd6",
+        "type": "tab",
+        "label": "Jogo da Velha",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "999e4149fa322485",
+        "type": "tab",
+        "label": "Jogo da Velha UI/UX V2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "260c12ff5690a777",
+        "type": "group",
+        "z": "d0affe21d96e1cd6",
+        "name": "Simulação (substituir)",
+        "style": {
+            "label": true,
+            "stroke": "#ff0000",
+            "label-position": "n",
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "6f304b83fcb8c95b",
+            "95e1718ddd4713d5",
+            "8be942a26b2adaf4",
+            "3fa1309d11133caf",
+            "df12c9ae01a05657",
+            "6d230d8a77aac0b6"
+        ],
+        "x": 194,
+        "y": 219,
+        "w": 172,
+        "h": 282
+    },
+    {
+        "id": "8ae11cf8c5865f59",
+        "type": "group",
+        "z": "d0affe21d96e1cd6",
+        "name": "Tabuleiro",
+        "style": {
+            "label": true,
+            "stroke": "#ffC000",
+            "fill": "#ffefbf"
+        },
+        "nodes": [
+            "e73f83c3aa28828a",
+            "0c1e9c256eaca7e9",
+            "bb9794e616b6905a",
+            "2cccb6a671b5e403",
+            "91bda4be250b45dc",
+            "dc2c1b991d58d86a",
+            "3b9a5e1510b4c5b6",
+            "b9cb1807d9026aca",
+            "fd6c0b2b353140d1",
+            "9c1405d1bebb7a2d",
+            "5360b0838a53310c",
+            "125e5c89e0f69bd1",
+            "11db977aa9ba5feb",
+            "c3a636c956f256f3",
+            "6ad0f7f3636e1033",
+            "9d9c6768819f2d62",
+            "560c7bacbe0a6d49",
+            "d7eecd0e75480315"
+        ],
+        "x": 834,
+        "y": 79,
+        "w": 412,
+        "h": 402
+    },
+    {
+        "id": "5ebc403a88259219",
+        "type": "group",
+        "z": "d0affe21d96e1cd6",
+        "name": "Legenda",
+        "style": {
+            "label": true,
+            "stroke": "#0070c0",
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "685fcdc419066331",
+            "5b2d3d956aad299c"
+        ],
+        "x": 414,
+        "y": 199,
+        "w": 172,
+        "h": 122
+    },
+    {
+        "id": "e128384fc10b8a95",
+        "type": "group",
+        "z": "d0affe21d96e1cd6",
+        "name": "Jogada",
+        "style": {
+            "label": true,
+            "stroke": "#92d04f",
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "76f54938aabcee79",
+            "f51b6d6b29f6c58d",
+            "bdc2cba6393d87cb",
+            "4168163257cd499b"
+        ],
+        "x": 174,
+        "y": 759,
+        "w": 692,
+        "h": 82
+    },
+    {
+        "id": "dccaaddcf4198ffe",
+        "type": "group",
+        "z": "d0affe21d96e1cd6",
+        "name": "Mensagens",
+        "style": {
+            "label": true,
+            "fill": "#ffbfbf"
+        },
+        "nodes": [
+            "534359c1a527ceec",
+            "f33f57c27146bee3",
+            "422ec30cb627921f"
+        ],
+        "x": 834,
+        "y": 499,
+        "w": 312,
+        "h": 122
+    },
+    {
+        "id": "b65050824a66e0e5",
+        "type": "group",
+        "z": "d0affe21d96e1cd6",
+        "name": "Teclado",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1fa3b44929aa32ec",
+            "64b4accc0a3616ef",
+            "c640bc4343f34e1e",
+            "6276dac110ef7420",
+            "d795bbae751ea02a",
+            "2c6b5216eabf9344",
+            "9281b9d3674b7895",
+            "6cd1decbd8fcfc8f",
+            "0c8abcb01b029bd3"
+        ],
+        "x": 414,
+        "y": 339,
+        "w": 152,
+        "h": 402
+    },
+    {
+        "id": "58d1ca37a34c229b",
+        "type": "group",
+        "z": "999e4149fa322485",
+        "name": "Reiniciar",
+        "style": {
+            "label": true,
+            "fill": "#ff7f7f",
+            "color": "#000000"
+        },
+        "nodes": [
+            "003057fbab44e564",
+            "9f8a40583a04b078",
+            "89d0ec368b2f14a3",
+            "7c751685ae17cd57"
+        ],
+        "x": 754,
+        "y": 619,
+        "w": 632,
+        "h": 142
+    },
+    {
+        "id": "8b4124a667866da6",
+        "type": "group",
+        "z": "999e4149fa322485",
+        "name": "Teclado",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "fill": "#ffff7f"
+        },
+        "nodes": [
+            "4d10622d312590a1",
+            "5ec4ae9fd1db4df0",
+            "933c8d0a54b3a67c",
+            "ba49921bfae7c5df",
+            "607ef68686190625",
+            "bac29c99763d49c6",
+            "fd7b6e7405c52cdc",
+            "9427d5544aa96262",
+            "3473c9fe44c4a9ec",
+            "7c9bb98be82f5d71",
+            "d69118bebbbda5f5",
+            "ccece42fd0507530",
+            "ad7ff2a34c9d1143",
+            "16b3ade1af2e1866",
+            "946a5c52c5d16407",
+            "197c464823c95f38",
+            "7adbd274344a9423",
+            "e72a65a213ec9921"
+        ],
+        "x": 834,
+        "y": 59,
+        "w": 332,
+        "h": 402
+    },
+    {
+        "id": "89a4c6e059b1b98f",
+        "type": "group",
+        "z": "999e4149fa322485",
+        "name": "Mensagens",
+        "style": {
+            "label": true,
+            "fill": "#addb7b",
+            "color": "#000000"
+        },
+        "nodes": [
+            "0aa1da4fd39c1f20",
+            "82a0b24cb71ea16b"
+        ],
+        "x": 834,
+        "y": 479,
+        "w": 152,
+        "h": 122
+    },
+    {
+        "id": "852d9b08aec276f1",
+        "type": "group",
+        "z": "999e4149fa322485",
+        "name": "Dados",
+        "style": {
+            "label": true,
+            "fill": "#addb7b",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "e3f3089604c93d07",
+            "d0ed12abd00e2ebc"
+        ],
+        "x": 254,
+        "y": 359,
+        "w": 292,
+        "h": 82
+    },
+    {
+        "id": "1062acbbfe200a1b",
+        "type": "ui_tab",
+        "name": "Jogo da Velha",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "10f43a8fb6f24a9d",
+        "type": "ui_group",
+        "name": "Tabuleiro",
+        "tab": "1062acbbfe200a1b",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b33d9a02e219e55f",
+        "type": "ui_group",
+        "name": "Legenda",
+        "tab": "1062acbbfe200a1b",
+        "order": 3,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "895ff163283ccf25",
+        "type": "ui_group",
+        "name": "Jogada",
+        "tab": "1062acbbfe200a1b",
+        "order": 2,
+        "disp": false,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "025489674461a887",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "80fc19c6a834e1fa",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "COM5",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "98d9124ca8abc8c7",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "895ff163283ccf25",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "810deecc71202e2b",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "895ff163283ccf25",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "694633896e36ed47",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "895ff163283ccf25",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "dcb1b84690b46833",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "895ff163283ccf25",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4be5c5e7e9068416",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "895ff163283ccf25",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b836015fe9c46a85",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "895ff163283ccf25",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7cb4cc457def814c",
+        "type": "ui_spacer",
+        "z": "d0affe21d96e1cd6",
+        "name": "spacer",
+        "group": "b33d9a02e219e55f",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "bd1713db093e0503",
+        "type": "ui_tab",
+        "name": "Jogo da Velha V2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2b730d4bb4011210",
+        "type": "ui_group",
+        "name": "",
+        "tab": "bd1713db093e0503",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7e7c03c8ec2750e7",
+        "type": "ui_spacer",
+        "z": "999e4149fa322485",
+        "name": "spacer",
+        "group": "2b730d4bb4011210",
+        "order": 10,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "6f304b83fcb8c95b",
+        "type": "inject",
+        "z": "d0affe21d96e1cd6",
+        "g": "260c12ff5690a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"tabuleiro\": \"000000000' }",
+        "payloadType": "str",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "dc5979ef33b93c70",
+        "type": "json",
+        "z": "d0affe21d96e1cd6",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "0c1e9c256eaca7e9",
+                "2cccb6a671b5e403",
+                "dc2c1b991d58d86a",
+                "b9cb1807d9026aca",
+                "9c1405d1bebb7a2d",
+                "d7eecd0e75480315",
+                "125e5c89e0f69bd1",
+                "c3a636c956f256f3",
+                "9d9c6768819f2d62",
+                "b4109e10573f9be2",
+                "534359c1a527ceec",
+                "f33f57c27146bee3",
+                "03817374dbdb3f1f"
+            ]
+        ]
+    },
+    {
+        "id": "95e1718ddd4713d5",
+        "type": "inject",
+        "z": "d0affe21d96e1cd6",
+        "g": "260c12ff5690a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"tabuleiro\": \"111111111\" }",
+        "payloadType": "str",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "8be942a26b2adaf4",
+        "type": "inject",
+        "z": "d0affe21d96e1cd6",
+        "g": "260c12ff5690a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"tabuleiro\": \"222000000\" }",
+        "payloadType": "str",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "3fa1309d11133caf",
+        "type": "inject",
+        "z": "d0affe21d96e1cd6",
+        "g": "260c12ff5690a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"tabuleiro\": \"000111000\" }",
+        "payloadType": "str",
+        "x": 290,
+        "y": 380,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "df12c9ae01a05657",
+        "type": "inject",
+        "z": "d0affe21d96e1cd6",
+        "g": "260c12ff5690a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"tabuleiro\": \"000000111\" }",
+        "payloadType": "str",
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "6d230d8a77aac0b6",
+        "type": "inject",
+        "z": "d0affe21d96e1cd6",
+        "g": "260c12ff5690a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"tabuleiro\": \"112111222\" }",
+        "payloadType": "str",
+        "x": 290,
+        "y": 460,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "0c1e9c256eaca7e9",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[0]",
+        "func": "msg.payload = msg.payload.tabuleiro[0];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 120,
+        "wires": [
+            [
+                "e73f83c3aa28828a"
+            ]
+        ]
+    },
+    {
+        "id": "2cccb6a671b5e403",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[1]",
+        "func": "msg.payload = msg.payload.tabuleiro[1];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 160,
+        "wires": [
+            [
+                "bb9794e616b6905a"
+            ]
+        ]
+    },
+    {
+        "id": "dc2c1b991d58d86a",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[2]",
+        "func": "msg.payload = msg.payload.tabuleiro[2];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 200,
+        "wires": [
+            [
+                "91bda4be250b45dc"
+            ]
+        ]
+    },
+    {
+        "id": "b9cb1807d9026aca",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[3]",
+        "func": "msg.payload = msg.payload.tabuleiro[3];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 240,
+        "wires": [
+            [
+                "3b9a5e1510b4c5b6"
+            ]
+        ]
+    },
+    {
+        "id": "9c1405d1bebb7a2d",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[4]",
+        "func": "msg.payload = msg.payload.tabuleiro[4];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 280,
+        "wires": [
+            [
+                "fd6c0b2b353140d1"
+            ]
+        ]
+    },
+    {
+        "id": "125e5c89e0f69bd1",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[6]",
+        "func": "msg.payload = msg.payload.tabuleiro[6];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 360,
+        "wires": [
+            [
+                "11db977aa9ba5feb"
+            ]
+        ]
+    },
+    {
+        "id": "c3a636c956f256f3",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[7]",
+        "func": "msg.payload = msg.payload.tabuleiro[7];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 400,
+        "wires": [
+            [
+                "6ad0f7f3636e1033"
+            ]
+        ]
+    },
+    {
+        "id": "9d9c6768819f2d62",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[8]",
+        "func": "msg.payload = msg.payload.tabuleiro[8];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 440,
+        "wires": [
+            [
+                "560c7bacbe0a6d49"
+            ]
+        ]
+    },
+    {
+        "id": "d7eecd0e75480315",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "name": "msg.payload.tabuleiro[5]",
+        "func": "msg.payload = msg.payload.tabuleiro[5];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 320,
+        "wires": [
+            [
+                "5360b0838a53310c"
+            ]
+        ]
+    },
+    {
+        "id": "8befc3feef5977c6",
+        "type": "debug",
+        "z": "d0affe21d96e1cd6",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "bdc2cba6393d87cb",
+        "type": "change",
+        "z": "d0affe21d96e1cd6",
+        "g": "e128384fc10b8a95",
+        "name": "Jogada",
+        "rules": [
+            {
+                "t": "set",
+                "p": "jogada",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 800,
+        "wires": [
+            [
+                "f51b6d6b29f6c58d"
+            ]
+        ]
+    },
+    {
+        "id": "b4109e10573f9be2",
+        "type": "debug",
+        "z": "d0affe21d96e1cd6",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f33f57c27146bee3",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "g": "dccaaddcf4198ffe",
+        "name": "ERRO",
+        "func": "if(msg.payload.erro==\"\") {\n    msg.topic = \"\"\n} else {\n    msg.topic = \"ERRO !!!\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 580,
+        "wires": [
+            [
+                "422ec30cb627921f"
+            ]
+        ]
+    },
+    {
+        "id": "685fcdc419066331",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "5ebc403a88259219",
+        "name": "",
+        "group": "b33d9a02e219e55f",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Jogador 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "jogada",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 500,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b2d3d956aad299c",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "5ebc403a88259219",
+        "name": "",
+        "group": "b33d9a02e219e55f",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Jogador 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "jogada",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 500,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f51b6d6b29f6c58d",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "e128384fc10b8a95",
+        "name": "",
+        "group": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Enviar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "jogada",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 570,
+        "y": 800,
+        "wires": [
+            [
+                "8befc3feef5977c6",
+                "4168163257cd499b",
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "76f54938aabcee79",
+        "type": "ui_text_input",
+        "z": "d0affe21d96e1cd6",
+        "g": "e128384fc10b8a95",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 260,
+        "y": 800,
+        "wires": [
+            [
+                "bdc2cba6393d87cb"
+            ]
+        ]
+    },
+    {
+        "id": "4168163257cd499b",
+        "type": "ui_text",
+        "z": "d0affe21d96e1cd6",
+        "g": "e128384fc10b8a95",
+        "group": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Jogada realizada",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "534359c1a527ceec",
+        "type": "ui_text",
+        "z": "d0affe21d96e1cd6",
+        "g": "dccaaddcf4198ffe",
+        "group": "895ff163283ccf25",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mensagem",
+        "format": "{{msg.payload.msg}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Courier,monospace",
+        "fontSize": 16,
+        "color": "#0033ff",
+        "x": 930,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "422ec30cb627921f",
+        "type": "ui_text",
+        "z": "d0affe21d96e1cd6",
+        "g": "dccaaddcf4198ffe",
+        "group": "895ff163283ccf25",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "{{msg.topic}}",
+        "format": "{{msg.payload.erro}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Courier,monospace",
+        "fontSize": 16,
+        "color": "#ff0000",
+        "x": 1070,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8b994e4c04745ad8",
+        "type": "serial in",
+        "z": "d0affe21d96e1cd6",
+        "name": "",
+        "serial": "80fc19c6a834e1fa",
+        "x": 250,
+        "y": 120,
+        "wires": [
+            [
+                "dc5979ef33b93c70"
+            ]
+        ]
+    },
+    {
+        "id": "ede476634f005f8c",
+        "type": "serial out",
+        "z": "d0affe21d96e1cd6",
+        "name": "",
+        "serial": "80fc19c6a834e1fa",
+        "x": 710,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e73f83c3aa28828a",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 1,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "0",
+        "x": 1170,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bb9794e616b6905a",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 2,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "1",
+        "x": 1170,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "91bda4be250b45dc",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 3,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "2",
+        "x": 1170,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3b9a5e1510b4c5b6",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 4,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "3",
+        "x": 1170,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fd6c0b2b353140d1",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 5,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "4",
+        "x": 1170,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5360b0838a53310c",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 6,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "5",
+        "x": 1170,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "11db977aa9ba5feb",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 7,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "6",
+        "x": 1170,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "6ad0f7f3636e1033",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 8,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "7",
+        "x": 1170,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "560c7bacbe0a6d49",
+        "type": "ui_led",
+        "z": "d0affe21d96e1cd6",
+        "g": "8ae11cf8c5865f59",
+        "order": 9,
+        "group": "10f43a8fb6f24a9d",
+        "width": 3,
+        "height": 3,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "8",
+        "x": 1170,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1fa3b44929aa32ec",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "1 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "1 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 540,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "64b4accc0a3616ef",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "0 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "0 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "c640bc4343f34e1e",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "0 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "0 2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 620,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "6276dac110ef7420",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "0 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "0 0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "d795bbae751ea02a",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 14,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "2 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "2 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 580,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "2c6b5216eabf9344",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 11,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "1 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "1 2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "9281b9d3674b7895",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 7,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "1 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "1 0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "6cd1decbd8fcfc8f",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 12,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "2 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "2 0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "0c8abcb01b029bd3",
+        "type": "ui_button",
+        "z": "d0affe21d96e1cd6",
+        "g": "b65050824a66e0e5",
+        "name": "",
+        "group": "895ff163283ccf25",
+        "order": 16,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "2 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "className": "",
+        "icon": "",
+        "payload": "2 2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 700,
+        "wires": [
+            [
+                "ede476634f005f8c"
+            ]
+        ]
+    },
+    {
+        "id": "03817374dbdb3f1f",
+        "type": "link out",
+        "z": "d0affe21d96e1cd6",
+        "name": "JSON",
+        "mode": "link",
+        "links": [
+            "c5cff8e20090266f"
+        ],
+        "x": 765,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c5cff8e20090266f",
+        "type": "link in",
+        "z": "d0affe21d96e1cd6",
+        "name": "link in 1",
+        "links": [
+            "03817374dbdb3f1f"
+        ],
+        "x": 185,
+        "y": 600,
+        "wires": [
+            [
+                "abc196235cf94a3c"
+            ]
+        ]
+    },
+    {
+        "id": "abc196235cf94a3c",
+        "type": "function",
+        "z": "d0affe21d96e1cd6",
+        "name": "TrocaCor",
+        "func": "if (msg.payload.jogadorDaVez == 1) {\n    msg.payload = \"red\";\n} else {\n    msg.payload = \"green\";\n}\n// msg.background = \"black\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 600,
+        "wires": [
+            [
+                "6276dac110ef7420",
+                "9281b9d3674b7895",
+                "6cd1decbd8fcfc8f",
+                "64b4accc0a3616ef",
+                "1fa3b44929aa32ec",
+                "d795bbae751ea02a",
+                "c640bc4343f34e1e",
+                "2c6b5216eabf9344",
+                "0c8abcb01b029bd3"
+            ]
+        ]
+    },
+    {
+        "id": "01521ff3ec864374",
+        "type": "serial out",
+        "z": "999e4149fa322485",
+        "name": "",
+        "serial": "80fc19c6a834e1fa",
+        "x": 1650,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7c9bb98be82f5d71",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "1 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "1 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 260,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "d69118bebbbda5f5",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "0 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "0 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 140,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "ccece42fd0507530",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "0 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "0 2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 180,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "ad7ff2a34c9d1143",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 1,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "0 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "0 0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 100,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "16b3ade1af2e1866",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "2 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "2 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "946a5c52c5d16407",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "1 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "1 2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 300,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "197c464823c95f38",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "1 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "1 0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 220,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "7adbd274344a9423",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 7,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "2 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "2 0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 340,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "e72a65a213ec9921",
+        "type": "ui_button",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "",
+        "group": "2b730d4bb4011210",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "2 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload.color}}",
+        "className": "",
+        "icon": "",
+        "payload": "2 2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 420,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "5ec4ae9fd1db4df0",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 1",
+        "func": "const id=0;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog == \"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 100,
+        "wires": [
+            [
+                "ad7ff2a34c9d1143"
+            ]
+        ]
+    },
+    {
+        "id": "933c8d0a54b3a67c",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 2",
+        "func": "const id=1;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 140,
+        "wires": [
+            [
+                "d69118bebbbda5f5"
+            ]
+        ]
+    },
+    {
+        "id": "ba49921bfae7c5df",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 3",
+        "func": "const id=2;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 180,
+        "wires": [
+            [
+                "ccece42fd0507530"
+            ]
+        ]
+    },
+    {
+        "id": "607ef68686190625",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 4",
+        "func": "const id=3;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 220,
+        "wires": [
+            [
+                "197c464823c95f38"
+            ]
+        ]
+    },
+    {
+        "id": "bac29c99763d49c6",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 5",
+        "func": "const id=4;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 260,
+        "wires": [
+            [
+                "7c9bb98be82f5d71"
+            ]
+        ]
+    },
+    {
+        "id": "4d10622d312590a1",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 6",
+        "func": "const id=5;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 300,
+        "wires": [
+            [
+                "946a5c52c5d16407"
+            ]
+        ]
+    },
+    {
+        "id": "fd7b6e7405c52cdc",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 7",
+        "func": "const id=6;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 340,
+        "wires": [
+            [
+                "7adbd274344a9423"
+            ]
+        ]
+    },
+    {
+        "id": "9427d5544aa96262",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 8",
+        "func": "const id=7;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 380,
+        "wires": [
+            [
+                "16b3ade1af2e1866"
+            ]
+        ]
+    },
+    {
+        "id": "3473c9fe44c4a9ec",
+        "type": "function",
+        "z": "999e4149fa322485",
+        "g": "8b4124a667866da6",
+        "name": "function 9",
+        "func": "const id=8;\n\nlet color = \"white\";\nlet jog = msg.payload.tabuleiro[id]\n\nif(jog == \"1\"){\n  color = \"red\";\n} else if(jog==\"2\") {\n    color=\"green\";\n}\n\nmsg.payload = {\n  id: id,\n  color: color,\n  jog: jog\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 420,
+        "wires": [
+            [
+                "e72a65a213ec9921"
+            ]
+        ]
+    },
+    {
+        "id": "e3f3089604c93d07",
+        "type": "serial in",
+        "z": "999e4149fa322485",
+        "g": "852d9b08aec276f1",
+        "name": "",
+        "serial": "80fc19c6a834e1fa",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "d0ed12abd00e2ebc"
+            ]
+        ]
+    },
+    {
+        "id": "d0ed12abd00e2ebc",
+        "type": "json",
+        "z": "999e4149fa322485",
+        "g": "852d9b08aec276f1",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "5ec4ae9fd1db4df0",
+                "933c8d0a54b3a67c",
+                "ba49921bfae7c5df",
+                "607ef68686190625",
+                "bac29c99763d49c6",
+                "4d10622d312590a1",
+                "fd7b6e7405c52cdc",
+                "9427d5544aa96262",
+                "3473c9fe44c4a9ec",
+                "0aa1da4fd39c1f20",
+                "82a0b24cb71ea16b",
+                "89d0ec368b2f14a3",
+                "9f8a40583a04b078"
+            ]
+        ]
+    },
+    {
+        "id": "0aa1da4fd39c1f20",
+        "type": "ui_text",
+        "z": "999e4149fa322485",
+        "g": "89a4c6e059b1b98f",
+        "group": "2b730d4bb4011210",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload.msg}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 910,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "82a0b24cb71ea16b",
+        "type": "ui_text",
+        "z": "999e4149fa322485",
+        "g": "89a4c6e059b1b98f",
+        "group": "2b730d4bb4011210",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload.erro}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#ff0000",
+        "x": 910,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "003057fbab44e564",
+        "type": "ui_toast",
+        "z": "999e4149fa322485",
+        "g": "58d1ca37a34c229b",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1290,
+        "y": 680,
+        "wires": [
+            [
+                "01521ff3ec864374"
+            ]
+        ]
+    },
+    {
+        "id": "9f8a40583a04b078",
+        "type": "switch",
+        "z": "999e4149fa322485",
+        "g": "58d1ca37a34c229b",
+        "name": "",
+        "property": "payload.velha",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "9",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 720,
+        "wires": [
+            [
+                "7c751685ae17cd57"
+            ]
+        ]
+    },
+    {
+        "id": "89d0ec368b2f14a3",
+        "type": "switch",
+        "z": "999e4149fa322485",
+        "g": "58d1ca37a34c229b",
+        "name": "",
+        "property": "payload.HaVencedor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 660,
+        "wires": [
+            [
+                "7c751685ae17cd57"
+            ]
+        ]
+    },
+    {
+        "id": "7c751685ae17cd57",
+        "type": "change",
+        "z": "999e4149fa322485",
+        "g": "58d1ca37a34c229b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.msg",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 680,
+        "wires": [
+            [
+                "003057fbab44e564"
+            ]
+        ]
+    }
+]
