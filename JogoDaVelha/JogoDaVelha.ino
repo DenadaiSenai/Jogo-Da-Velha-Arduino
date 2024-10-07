@@ -10,7 +10,7 @@ int coluna;
 bool HaVencedor = false;
 int tabuleiro[9];
 int jogadorDaVez = 1;
-String erro="";
+String erro = "";
 
 // Jogo - JSON para envio ao Node-red pela serial
 JsonDocument Jogo;
@@ -129,12 +129,13 @@ void loop() {
     // Serial.println(jogadorDaVez);
 
     // Espera o comando da serial
-    while (!Serial.available());
+    while (!Serial.available())
+      ;
     // Recebe a jogada pela serial
     jogada = Serial.readStringUntil('\n');
     //jogada = Serial.readString();
     //Serial.println(jogada.length());
-    erro = ""; // Limpa a variável da msg de erro
+    erro = "";  // Limpa a variável da msg de erro
     if (validaJogada(jogada)) {
       // Se jogada válida continue .....
       // Serial.println("Se jogada válida continue .....");
@@ -194,5 +195,6 @@ void loop() {
     // Serial.println("VELHA!!!");
     PartidaJSON(F("VELHA!!! Clique no botão enviar para reiniciar"));
   }
-  while (!Serial.available());
+  while (!Serial.available())    ;
+  Serial.readStringUntil('\n');
 }
