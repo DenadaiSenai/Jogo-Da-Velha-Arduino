@@ -1,5 +1,8 @@
 #include <ArduinoJson.h>
 
+// Velocidade da serial BITS POR SEGUNDO
+#define BAUDRATE 2000000
+
 // Macro para calcular a qtde de elementos de uma matriz
 #define ARRAY_SIZE(array) ((sizeof(array)) / (sizeof(array[0])))
 
@@ -85,7 +88,7 @@ void PartidaJSON(String msg = "", String erro = "") {
 
 void setup() {
   // Habilita a serial em configura com a velocidade de 115200
-  Serial.begin(115200);
+  Serial.begin(BAUDRATE);
 }
 
 void loop() {
@@ -164,6 +167,7 @@ void loop() {
     // Serial.println("VELHA!!!");
     PartidaJSON(F("VELHA!!! Reiniciar !!!"));
   }
-  while (!Serial.available())    ;
+  // Ao terminar o jogo, aguarda um sinal pela seril para inicar uma nova partida
+  while (!Serial.available());
   Serial.readStringUntil('\n');
 }
