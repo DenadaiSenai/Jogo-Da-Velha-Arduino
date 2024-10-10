@@ -1,7 +1,7 @@
 #include <ArduinoJson.h>
 
 // Velocidade da serial BITS POR SEGUNDO
-#define BAUDRATE 2000000
+#define BAUDRATE 115200
 
 // Macro para calcular a qtde de elementos de uma matriz
 #define ARRAY_SIZE(array) ((sizeof(array)) / (sizeof(array[0])))
@@ -152,6 +152,7 @@ void loop() {
     } else {
       // Serial.println("Jogada inválida!!!");
       erro = F("Jogada inválida");
+      //PartidaJSON("Jogada inválida", "erro");
     }
     // delay(1000000);
   } while (!HaVencedor && velha < 9);  // Finaliza o jogo caso tenha vencedor ou empate
