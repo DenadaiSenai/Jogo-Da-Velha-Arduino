@@ -1,3 +1,4 @@
+// --- (A Classe JogoDaVelhaLogic permanece exatamente a mesma aqui acima) ---
 /**
  * Classe que gerencia a lógica do Jogo da Velha.
  * É independente da interface do usuário (UI).
@@ -114,106 +115,84 @@ class JogoDaVelhaLogic {
 }
 
 
-// --- Lógica de Interação com a UI ---
+// --- Lógica de Interação com a UI (Otimizada) ---
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Pega as referências dos elementos do DOM
+    // Referências do DOM (mantidas para clareza)
     const tabuleiroDiv = document.getElementById('tabuleiro');
     const mensagemStatusDiv = document.getElementById('mensagem-status');
-    const mensagemAvisoDiv = document.getElementById('mensagem-aviso');
     const botaoReiniciar = document.getElementById('botao-reiniciar');
-    // Pega todas as células (NodeList)
-    const celulas = tabuleiroDiv.querySelectorAll('.celula');
+    const celulas = Array.from(tabuleiroDiv.querySelectorAll('.celula')); // Converte NodeList para Array
 
-    // Cria a instância da lógica do jogo
+    // Instância da lógica do jogo
     const jogo = new JogoDaVelhaLogic();
 
-    // Função para atualizar a interface (HTML) com base no estado do jogo
+    // --- Mapeamentos para reduzir condicionais ---
+    const InfoJogador = {
+        [JogoDaVelhaLogic.Jogador.NENHUM]: { simbolo: '', classe: null },
+        [JogoDaVelhaLogic.Jogador.UM]: { simbolo: 'X', classe: 'jogador1' },
+        [JogoDaVelhaLogic.Jogador.DOIS]: { simbolo: 'O', classe: 'jogador2' },
+    };
+
+    const MensagensStatus = {
+        [JogoDaVelhaLogic.StatusJogo.VITORIA_JOGADOR_UM]: "Jogador 1 (X) venceu!",
+        [JogoDaVelhaLogic.StatusJogo.VITORIA_JOGADOR_DOIS]: "Jogador 2 (O) venceu!",
+        [JogoDaVelhaLogic.StatusJogo.EMPATE]: "Deu Velha (Empate)!"
+        // EM_ANDAMENTO é tratado separadamente devido à dinâmica do jogador da vez
+    };
+
+    // --- Funções da UI ---
+
     function atualizarUI() {
         const tabuleiroAtual = jogo.getTabuleiro();
-        const jogadorVez = jogo.getJogadorDaVez();
         const statusJogo = jogo.getStatus();
+        const jogadorVez = jogo.getJogadorDaVez();
+        const jogoEmAndamento = (statusJogo === JogoDaVelhaLogic.StatusJogo.EM_ANDAMENTO);
 
-        // Atualizar as células do tabuleiro no HTML
+        // Atualizar Células
         celulas.forEach((celula, index) => {
             const valor = tabuleiroAtual[index];
-            let simbolo = '';
-            // Define o símbolo e a classe CSS
-            celula.classList.remove('jogador1', 'jogador2'); // Limpa classes antigas
-            if (valor === JogoDaVelhaLogic.Jogador.UM) {
-                simbolo = 'X';
-                celula.classList.add('jogador1');
-            } else if (valor === JogoDaVelhaLogic.Jogador.DOIS) {
-                simbolo = 'O';
-                celula.classList.add('jogador2');
-            }
-            celula.textContent = simbolo;
+            const { simbolo, classe } = InfoJogador[valor]; // Usa o mapeamento
 
-            // Habilita/Desabilita clique na célula
-            // Célula clicável se estiver vazia E o jogo estiver em andamento
-            const clicavel = (valor === JogoDaVelhaLogic.Jogador.NENHUM && statusJogo === JogoDaVelhaLogic.StatusJogo.EM_ANDAMENTO);
-            celula.style.pointerEvents = clicavel ? 'auto' : 'none';
+            celula.textContent = simbolo;
+            celula.className = 'celula'; // Reseta classes, mantendo apenas 'celula'
+            if (classe) {
+                celula.classList.add(classe); // Adiciona classe do jogador, se houver
+            }
+            // Habilita/Desabilita clique
+            celula.style.pointerEvents = (valor === JogoDaVelhaLogic.Jogador.NENHUM && jogoEmAndamento) ? 'auto' : 'none';
         });
 
-        // Atualizar mensagem de status/jogador da vez
-        switch (statusJogo) {
-            case JogoDaVelhaLogic.StatusJogo.EM_ANDAMENTO:
-                mensagemStatusDiv.textContent = `Vez do Jogador ${jogadorVez} (${jogadorVez === 1 ? 'X' : 'O'})`;
-                break;
-            case JogoDaVelhaLogic.StatusJogo.VITORIA_JOGADOR_UM:
-                mensagemStatusDiv.textContent = "Jogador 1 (X) venceu!";
-                break;
-            case JogoDaVelhaLogic.StatusJogo.VITORIA_JOGADOR_DOIS:
-                mensagemStatusDiv.textContent = "Jogador 2 (O) venceu!";
-                break;
-            case JogoDaVelhaLogic.StatusJogo.EMPATE:
-                mensagemStatusDiv.textContent = "Deu Velha (Empate)!";
-                break;
+        // Atualizar Mensagem de Status
+        if (jogoEmAndamento) {
+            mensagemStatusDiv.textContent = `Vez do Jogador ${jogadorVez} (${InfoJogador[jogadorVez].simbolo})`;
+        } else {
+            mensagemStatusDiv.textContent = MensagensStatus[statusJogo] || "Jogo Terminado"; // Usa mapeamento ou fallback
         }
     }
 
-    // Função para lidar com o clique em uma célula
     function handleCelulaClick(event) {
-        // Pega o elemento que foi clicado
-        const celulaClicada = event.target;
+        // Garante que o clique foi numa célula válida e pega os dados
+        const celulaClicada = event.target.closest('.celula'); // Mais robusto que event.target
+        if (!celulaClicada || !celulaClicada.dataset.linha) return;
 
-        // Verifica se o clique foi realmente em uma célula (não no gap entre elas)
-        if (!celulaClicada.classList.contains('celula')) {
-            return;
-        }
-
-        // Obtém linha e coluna do data attribute
         const linha = parseInt(celulaClicada.dataset.linha);
         const coluna = parseInt(celulaClicada.dataset.coluna);
 
-        // Tenta fazer a jogada na lógica do jogo
-        const resultadoJogada = jogo.fazerJogada(linha, coluna);
-
-        // Se a jogada foi um sucesso (registrada na lógica), atualiza a UI
-        if (resultadoJogada === JogoDaVelhaLogic.StatusJogada.SUCESSO) {
-            atualizarUI();            
-        } else if (resultadoJogada === JogoDaVelhaLogic.StatusJogada.POSICAO_OCUPADA) {
-            console.warn("Tentativa de jogar em posição ocupada.");
-            // mensagemAvisoDiv.textContent = "Tentativa de jogar em posição ocupada";
-            // Poderia adicionar um feedback visual rápido aqui, se desejado
+        // Tenta fazer a jogada e atualiza a UI apenas se for bem-sucedida
+        if (jogo.fazerJogada(linha, coluna) === JogoDaVelhaLogic.StatusJogada.SUCESSO) {
+            atualizarUI();
         }
-        // Outros status (INVALIDA, JOGO_TERMINADO) são prevenidos pela lógica da UI
-        // que desabilita o clique, mas poderiam ser logados para debug se necessário.
+        // Não precisa de feedback para outros casos aqui, a UI já impede cliques inválidos
     }
 
-    // Função para o botão de reiniciar
     function handleReiniciarClick() {
-        jogo.reset(); // Reseta a lógica do jogo
-        atualizarUI(); // Atualiza a interface para o estado inicial
+        jogo.reset();
+        atualizarUI();
     }
 
-    // Adicionar Event Listeners
-    // Event listener no container do tabuleiro (event delegation)
+    // --- Configuração Inicial ---
     tabuleiroDiv.addEventListener('click', handleCelulaClick);
-
-    // Event listener no botão de reiniciar
     botaoReiniciar.addEventListener('click', handleReiniciarClick);
-
-    // Atualizar a UI inicial ao carregar a página
-    atualizarUI();
+    atualizarUI(); // Estado inicial
 });
