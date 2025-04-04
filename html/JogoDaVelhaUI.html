@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="JogoDaVelha.css">
+    <script src="JogoDaVelhaLogic.js" defer></script>
+</head>
+<body>
+
+    <div class="jogo-container">
+        <h1>Jogo da Velha</h1>
+
+        <p id="mensagem-status">Carregando...</p>
+        <p id="mensagem-aviso"></p>
+
+        <div id="tabuleiro">
+            <!-- Linha 0 -->
+            <div class="celula" data-linha="0" data-coluna="0"></div>
+            <div class="celula" data-linha="0" data-coluna="1"></div>
+            <div class="celula" data-linha="0" data-coluna="2"></div>
+            <!-- Linha 1 -->
+            <div class="celula" data-linha="1" data-coluna="0"></div>
+            <div class="celula" data-linha="1" data-coluna="1"></div>
+            <div class="celula" data-linha="1" data-coluna="2"></div>
+            <!-- Linha 2 -->
+            <div class="celula" data-linha="2" data-coluna="0"></div>
+            <div class="celula" data-linha="2" data-coluna="1"></div>
+            <div class="celula" data-linha="2" data-coluna="2"></div>
+        </div>
+
+        <button id="botao-reiniciar">Reiniciar Jogo</button>
+    </div>
+
+    <!-- Importa o script DEPOIS que os elementos HTML existem -->
+    <!-- Inclui a classe JogoDaVelhaLogic e a lógica de UI -->
+</body>
+</html>

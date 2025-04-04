@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.jogo-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#mensagem-status {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    min-height: 1.5em; /* Evita que o layout pule */
+    font-weight: bold;
+    color: #555;
+}
+
+#tabuleiro {
+    display: grid;
+    /* 3 colunas de tamanho igual (100px), pode ajustar */
+    grid-template-columns: repeat(3, 100px);
+    /* 3 linhas de tamanho igual (100px) */
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px; /* Espaço entre as células */
+    margin: 0 auto 20px auto; /* Centraliza o tabuleiro */
+    width: 315px; /* 3*100px + 2*5px gap */
+    border: 2px solid #555;
+    background-color: #eee; /* Fundo para os gaps */
+}
+
+.celula {
+    background-color: #fff;
+    border: 1px solid #ccc; /* Borda sutil para cada célula */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em; /* Tamanho do X e O */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none; /* Impede seleção de texto */
+}
+
+.celula:hover {
+    background-color: #949494;
+}
+
+/* Estilos para X e O */
+.celula.jogador1 { /* Jogador 1 (X) */
+    color: #0000ff; /* Azul */
+}
+
+.celula.jogador2 { /* Jogador 2 (O) */
+    color: #ff0000; /* Vermelho */
+}
+
+/* Estilo para célula desabilitada (ocupada ou jogo finalizado) */
+.celula:not([style*="pointer-events: auto"]):hover {
+    cursor: not-allowed;
+    background-color: #fff; /* Remove hover quando desabilitada */
+}
+
+#botao-reiniciar {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #28a745; /* Verde */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#botao-reiniciar:hover {
+    background-color: #218838;
+}
+
+#botao-reiniciar:active {
+    background-color: #1e7e34;
+}
