@@ -1,0 +1,6 @@
+{
+  "name": "Arduino Tic-Tac-Toe Serial Integration",
+  "description": "An interactive Tic-Tac-Toe web interface that integrates directly with a physical Arduino over web USB serial port (using the .ino JSON API), complete with a high-fidelity Arduino C++ emulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

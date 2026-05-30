@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-digital-grid {
+    background-image: radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
